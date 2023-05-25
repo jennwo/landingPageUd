@@ -1,0 +1,200 @@
+<!DOCTYPE >
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bubbles Cleaning</title>
+<!-- CSS Styles -->
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <!-- HTML Follows BEM naming conventions 
+  IDs are only used for sections to connect menu achors to sections -->
+  <header class="page__header">
+    <div class="topLogoContainer">
+        <img src="Assets/smallCleaningLogoSVG.png" alt="Bubbles Cleaning Logo">
+    </div>
+    <nav class="navbar__menu">
+      <!-- Navigation starts as empty UL that will be populated with JS -->
+      <ul id="navbar__list">
+      </ul>
+    </nav>
+  </header>
+
+  <main class="centeredBody">
+    <!-- HOME -->
+    <header class="main__hero">
+      <h1 class="headingText">Keeping your spaces <br> clean <br> and <br> refreshed!</h1>
+    </header>
+
+
+    <!-- Each Section has an ID (used for the anchor) and 
+    a data attribute that will populate the li node.
+    Adding more sections will automatically populate nav.
+    The first section is set to active class by default -->
+    <!-- ABOUT SECTION -->
+    <section id="about" data-nav="About" class="your-active-class">
+      <div class="landing__container">
+        <h2 class="aboutTitle">About Us</h2>
+        <p class="aboutText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.Sed convallis sollicitudin mauris ac tincidunt.</p>
+        <p class="aboutText aboutText2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+    </div>
+    </section>
+    <!-- SERVICES SECTION -->
+    <section id="services" data-nav="Services">
+      <div class="landing__container">
+        <h2>Services</h2>
+        <article class="serviceItem serviceCard1">
+            <div class="servicesImgContainer">
+                <img src="Assets/homeClip.png" alt="Illustration of a House">
+            </div>
+            <div class="servicesTextContainer">
+                <h3 class="servicesTextTitle">Home</h3>
+                <p class="servicesText">Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.</p>
+            </div>
+        </article>
+
+        <article class="serviceItem serviceCard2">
+            <div class="servicesImgContainer">
+                <img src="Assets/officesClip.png" alt="Illustration of Office Buildings">
+            </div>
+            <div class="servicesTextContainer">
+                <h3 class="servicesTextTitle">Apartment</h3>
+                <p class="servicesText">Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.</p>
+            </div>
+        </article>
+
+        <article class="serviceItem serviceCard3">
+            <div class="servicesImgContainer">
+                <img src="Assets/storeClip.png" alt="Illustration of a store front">
+            </div>
+            <div class="servicesTextContainer">
+                <h3 class="servicesTextTitle">Commercial</h3>
+                <p class="servicesText">Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.</p>
+            </div>
+        </article>
+     </div>
+    </section>
+
+    <section id="testimonials" data-nav="Testimonials">
+      <div class="landing__container">
+        <h2 class="testimonialsTitle">Testimonials</h2>
+        <div class="testimonialsContainer">
+            <div class="testimonialCard tcard1">
+                <div class="testimonialInfo">
+                    <div class="testimonialImageContainer">
+                        <img class="testimonialImage" src="Assets/testimonialPic1.png" alt="Person1">
+                    </div>
+                    <div class="testimonialIndivInfo">
+                        <h4 class="testimonialName">Janie Blue</h4>
+                        <h5 class="verifiedCustomer">Verified Customer</h5>
+                    </div>
+                    <div class="starsContainer">
+                        <img class="starsImage" src="Assets/5stars.png">
+                    </div>
+                </div>
+                    <div class="testimonialReview">
+                        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+                    </div>
+                
+            </div>
+
+            <div class="testimonialCard tcard2">
+                <div class="testimonialInfo">
+                    <div class="testimonialImageContainer">
+                        <img class="testimonialImage" src="Assets/testimonialPic2.png" alt="Person1">
+                    </div>
+                    <div class="testimonialIndivInfo">
+                        <h4 class="testimonialName">Dot Glee</h4>
+                        <h5 class="verifiedCustomer">Verified Customer</h5>
+                    </div>
+                    <div class="starsContainer">
+                        <img class="starsImage" src="Assets/5stars.png">
+                    </div>
+                </div>
+                    <div class="testimonialReview">
+                        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+                    </div>
+                
+            </div>
+
+            <!-- <div class="testimonialCard tcard3">
+                <div class="testimonialInfo">
+                    <div class="testimonialImageContainer">
+                        <img class=testimonialImage src="Assets/testimonialPic3.png" alt="Person1">
+                    </div>
+                    <div class="testimonialIndivInfo">
+                        <h4 class="testimonialName">Jane Saucerton</h4>
+                        <h5 class="verifiedCustomer">Verified Customer</h5>
+                    </div>
+                    <div class="starsContainer">
+                        <img class="starsImage" src="Assets/5stars.png">
+                    </div>
+                </div>
+                    <div class="testimonialReview">
+                        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+                    </div>
+                
+            </div>
+             -->
+            
+
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" data-nav="Contact">
+        <div class="landing__container">
+            <div class="contactContainer">
+                <div class="contactInfoContainer">
+                    <div class="logoContainerContact">
+                        <img src="Assets/smallCleaningLogoSVG.png" alt="Bubbles Cleaning Logo">
+                    </div>
+                    <div class="contactInfo">
+                        <h4 class="contactInfoText">Feel free to call us for a quote:</h4>
+                        <h4 class="contactInfoText">Ph: 555-455-2222</h4>
+                        <h4 class="contactInfoText">Emaill: BubblesCleanInquire@gmail.com</h4>
+                    </div>
+                    <div class="contactSocials">
+                        <h4 class="contactInfor Text">Check us out:</h4>
+                        <ul class="socialList">
+                            <li class="socialItem">
+                                <img src="Assets/facebookIcon.png" alt="Facebook Icon">
+                            </li>
+                            <li class="socialItem">
+                                <img src="Assets/instagramIcon.png" alt="Instagram Icon">
+                            </li>
+                            <li class="socialItem">
+                                <img src="Assets/yelpIcon.png" alt="Yelp Icon">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="contactContainer">
+                    <form action="/action_page.php">
+                        <label class="formLabel" for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    
+                        <label class="formLabel" for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                        <label class="formLabel" for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Get a quote today..." style="height:200px"></textarea>
+                    
+                        <input type="submit" value="Submit">
+                      </form>
+                </div>
+
+            </div>
+
+          
+        </div>
+    </section>
+  </main>
+  <footer class="page__footer">
+    <p>&copy Created by: WenJoDesigns22@gmail.com</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

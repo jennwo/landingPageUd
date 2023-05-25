@@ -1,0 +1,27 @@
+/* Navigation Styles*/
+.navbar__menu ul {
+    padding: 1rem;
+    padding-left: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.navbar__menu li {
+    display: inline-flex;
+    padding-left: 1rem;
+}
+
+.navbar__menu .menu__link {
+    display: inline-block;
+    /* display: block;
+    padding: 1em; */
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+
+.navbar__menu .menu__link:hover {
+    background: #333;
+    color: #fff;
+    transition: ease 0.3s all;
+}

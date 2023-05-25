@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;1,300;1,400&family=Rock+Salt&display=swap');
+@import url(navStyles.css);
+/* COLORS */
+:root{
+    --lightBlue: #38b1e4;
+    --blue: #2f86d5;
+    --medBlue: #12426e;
+    --vLightBlue: #e9eff4;
+    --vDarkBlue: #172a40;
+    --white: hsl(0, 0%, 100%);
+    --lightGray: #c1d1e0;
+    --darkGray: #5b5f6e;
+}
+hmtl{
+    font-size: 62.5%; 
+    /* (62.5/100) * 16px => 10px; 1rem = 10px */
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--darkGray);
+    text-align: center;
+}
+.centeredBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+h1, h2, h3{
+    font-family: 'Rock Salt', cursive;
+    color: var(--vDarkBlue);
+    font-weight: 400;
+}
+p{
+    padding: 1rem;
+}
+ul, li{
+    display: inline-block;
+    font-family: 'Rock Salt', cursive;
+}
+a{
+    color:(var(--vDarkBlue));
+}
+a:hover{
+    color: var(--vDarkBlue);
+    font-size: 1.2em;
+}
+
+/* HEADER STYLE */
+.topLogoContainer{
+    margin-top: 2rem;
+}
+.main__hero{
+    background-image: url(Assets/headLrg.png);
+    background-size: cover;
+    width: 90vw;
+    height: 40vh;
+}
+@media (min-width: 800px){
+    .main__hero{
+        background-image: url(Assets/headSmMed.jpg);
+    }
+}
+.headingText{
+    margin-top: 4rem;
+    color: var(--medBlue);
+    filter: opacity(1);
+    line-height: 120%;
+}
+
+/* ABOUT STYLE */
+#about{
+    margin-top: 2.5rem;
+    background-color: var(--blue);
+    width: 90vw;
+    /* margin-left: 2rem;
+    margin-right: 2rem; */
+}
+
+.aboutTitle{
+    color: var(--vLightBlue);
+}
+.aboutText{
+    padding: 0 5rem;
+    padding-bottom: 1rem;
+    color: var(--vLightBlue);
+    /* margin-top: -2rem; */
+    margin-bottom: 0;
+}
+.aboutText2{
+    padding-bottom: 4rem;
+}
+
+
+/* SERVICES STYLE */
+#services{
+    width: 90vw;
+    margin-top: 3rem;
+}
+
+.serviceItem{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "servicePic    location"
+    "servicePic    description";
+    border: 1px solid var(--darkGray);
+    background-color: var(--vLightBlue);
+    height: 35vh;
+    margin-bottom: 2rem;
+}
+
+.servicesImgContainer{
+    grid-area: servicePic;
+    /* border: 1px solid yellow; */
+    height: min-content;
+    margin-top: 3rem;
+}
+
+.servicesTextTitle{
+    grid-area: location;
+}
+.servicesText{
+    grid-area: description;
+}
+        
+/* TESTIMONIAL STYLES */
+
+#testimonials{
+    background-color: var(--blue);
+    width: 90vw;
+    margin-bottom: 2rem;
+}
+.testimonialCard{
+    border: 1px solid var(--lightGray);
+    background-color: var(--vLightBlue);
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "info"
+    "stars"
+    "review";
+    padding: 0, .5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 3rem;
+    height: 40vh;
+}
+.testimonialsTitle{
+    color: var(--vLightBlue);
+}
+.testimonialInfo{
+    grid-area: info;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "profilePic   indivInfo"
+    "stars        stars";
+    height: min-content;
+    margin-top: 1rem;
+}
+.testimonialImage{
+    grid-area: profilePic;
+    /* border: 3px solid white;
+    border-radius: 50%; */
+    padding: 0;
+}
+.testimonialIndivInfo{
+    grid-area: indivInfo;
+    /* border: 1px solid green; */
+    justify-self: center;
+    transform: translateX(-3rem);
+    height: min-content;
+}
+.verifiedCustomer{
+    /* border: 1px solid blue; */
+    margin-top: -1.3rem;
+    font-size:.5rem;
+}
+.testimonialReview{
+    grid-area: review;
+    /* border: 1px solid purple; */
+    transform: translateY(-7em);
+    font-size: .8em;
+    padding: 0;
+}
+
+.starsContainer{
+    grid-area: stars;
+    /* border: 1px solid yellow; */
+    height: min-content;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* CONTACT STYLES */
+#contact{
+ width: 90vw;
+}
+
+input[type=text], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+.formLabel{
+    transform: translateX(-10rem);
+}
+
+.contactContainer {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+/* .contactContainer{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 90vw;
+} */
+/* @media (min-width: 500px ) {
+    .contactForm{
+        max-width: 30vw;
+        transform: translateX(-4em);
+    }    
+} */
+
+/* SMALL SCREEN */
+
+@media (max-width: 425px){
+    .servicesText{
+        font-size: .8em;
+        margin-top: -1.5rem;
+    }
+    .testimonialCard{
+        height: 40vh;
+    }
+    .testimonialIndivInfo{
+        /* border: 1px solid green; */
+        transform: translateX(0);
+        height: min-content;
+    }
+
+    .testimonialReview{
+        font-size: .7em;
+        padding: 0;
+        margin-top: -5em;
+    }
+    .starsContainer{
+        grid-area: stars;
+        transform: translateY(-3em);
+        margin-left: 5rem;
+    }
+}
